@@ -11,3 +11,12 @@ const connection = mysql.createConnection({
     database: "employeeTracker_db",
 
 });
+
+// database connection
+connection.connect((err) => {
+    if (err) throw err;
+    console.log("database connected");
+    // application start
+    start();
+});
+
